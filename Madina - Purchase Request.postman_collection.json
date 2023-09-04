@@ -50,8 +50,41 @@
 		{
 			"name": "Standard Purchase Request",
 			"request": {
-				"method": "GET",
-				"header": []
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImN0eSI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJjOTBmZjllMy1hYzEwLTQxN2UtYTUwNy0zMTdhZjI3NGJiZTYiLCJlbnJvbGwiOiJRcmkzMzc2RUZwanhKZEJCYXVHWkxnPT0iLCJlbWFpbGFkZHJlc3MiOiJwYXJ2ZWpAbWFkaW5hLmNvIiwidXNlcklkIjoxLCJhY2NvdW50SWQiOjEsInNvY2tldCI6Im1hZGluYS1zb2NrZXQuaWJvcy5pbyIsInN1YiI6InBhcnZlakBtYWRpbmEuY28iLCJqdGkiOiJiNzk4MWJkYy1jYTg4LTQwNWUtOWQyZi0yZGJkOTY1ZDBmYWYiLCJpYXQiOiIwOS8wNS8yMDIzIDA0OjE2OjM1IiwiZXhwIjoxNjkzODUwNDAwLCJpc3MiOiJBa2lqSW5mb1RlY2ggTHRkLiAiLCJhdWQiOiJBdWRpZW5jZSJ9.QH0I3OwrvxriQ_Cnxu5wsPM3CgUoUo9Qhcr1i3xKLio",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"createPurchaseRequestHeader\": {\r\n        \"purchaseRequestCode\": \"\",\r\n        \"reffNo\": \"\",\r\n        \"purchaseRequestTypeId\": 1,\r\n        \"purchaseRequestTypeName\": \"Standard PR\",\r\n        \"accountId\": 1,\r\n        \"accountName\": \"Madina Group\",\r\n        \"businessUnitId\": 1,\r\n        \"businessUnitName\": \"Madina Polymer Industries Ltd\",\r\n        \"sbuid\": 1,\r\n        \"sbuname\": \"Madina Polymer Industries Ltd\",\r\n        \"purchaseOrganizationId\": 1,\r\n        \"purchaseOrganizationName\": \"Local Procurement\",\r\n        \"plantId\": 4,\r\n        \"plantName\": \"Gas Stove\",\r\n        \"warehouseId\": 4,\r\n        \"warehouseName\": \"Gas Stove WH (MPIL)\",\r\n        \"deliveryAddress\": \"\",\r\n        \"supplyingWarehouseId\": 0,\r\n        \"supplyingWarehouseName\": \"\",\r\n        \"requestDate\": \"2023-09-04\",\r\n        \"actionBy\": 1,\r\n        \"requiredDate\": \"2023-09-04\",\r\n        \"strPurpose\": \"test\"\r\n    },\r\n    \"createPurchaseRequestRow\": [\r\n        {\r\n            \"itemId\": 40,\r\n            \"uoMid\": 103,\r\n            \"uoMname\": \"Pices\",\r\n            \"numRequestQuantity\": 150,\r\n            \"dteRequiredDate\": \"2023-09-03T18:00:00.000Z\",\r\n            \"remarks\": \"testing purpose\",\r\n            \"useFor\": \"test\",\r\n            \"departmentId\": 11,\r\n            \"departmentName\": \"Marketing\"\r\n        }\r\n    ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://madina.ibos.io/procurement/PurchaseRequest/CreatePurchaseRequestInfo",
+					"protocol": "https",
+					"host": [
+						"madina",
+						"ibos",
+						"io"
+					],
+					"path": [
+						"procurement",
+						"PurchaseRequest",
+						"CreatePurchaseRequestInfo"
+					]
+				}
 			},
 			"response": []
 		}
